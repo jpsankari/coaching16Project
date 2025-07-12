@@ -1,10 +1,10 @@
-resource "aws_dynamodb_table" "c10_short_ids" {
-  name         = "c10_short_ids"
+resource "aws_dynamodb_table" "short_ids" {
+  name         = "short-ids"
   billing_mode = "PAY_PER_REQUEST"  # auto-scaling, no need to set read/write capacity
-  hash_key = "c10_short_ids"  # primary key
+  hash_key = "short_id"  # primary key
   attribute {
-    name = "c10_short_ids"
-    type = "S" # string
+    name = "short_id"
+    type = "S"  # string
   }
   # Optional: TTL to expire short links (e.g., after 30 days)
   ttl {
@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "c10_short_ids" {
     enabled        = true
   }
   tags = {
-    Name        = "c10_Sankari_short_ids"
+    Name        = "short-ids"
     Environment = "dev"
   }
 }
