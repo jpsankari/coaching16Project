@@ -49,6 +49,9 @@ jobs:
   #    with:
    #     framework: terraform
 
+    - name: Terraform init
+      run: terraform init
+
     - name: Terraform Plan
       run: terraform plan
 
