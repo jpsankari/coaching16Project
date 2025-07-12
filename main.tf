@@ -1,4 +1,4 @@
-resource "aws_dynamodb_table" "short_ids" {
+resource "aws_dynamodb_table" "c10-sankari-short_ids" {
   name         = "short-ids"
   billing_mode = "PAY_PER_REQUEST" # auto-scaling, no need to set read/write capacity
 
