@@ -48,6 +48,12 @@ jobs:
      # uses: bridgecrewio/checkov-action@master
       #with:
        # framework: terraform
-   
+    
+    - name: Terraform validate
+      run: terraform validate
+
     - name: Terraform Plan
       run: terraform plan
+    
+    - name: Terraform apply
+      run: terraform apply
