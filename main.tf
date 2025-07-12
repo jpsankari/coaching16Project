@@ -3,7 +3,7 @@ resource "aws_dynamodb_table" "c10-sankari-short_ids" {
   billing_mode = "PAY_PER_REQUEST"  # auto-scaling, no need to set read/write capacity
   hash_key = "c10_short_id"  # primary key
   attribute {
-    name = "short_id"
+    name = "c10_sankari_short_id"
     type = "S" # string
   }
   # Optional: TTL to expire short links (e.g., after 30 days)
