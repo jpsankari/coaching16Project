@@ -4,9 +4,6 @@ resource "aws_dynamodb_table" "short_ids" {
 
   hash_key = "short_id" # primary key
 
-point_in_time_recovery {
-+   enabled = true
-+  }
 
   attribute {
     name = "short_id"
