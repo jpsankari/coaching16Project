@@ -11,7 +11,6 @@ resource "aws_dynamodb_table" "c10-sankari-short_ids" {
     attribute_name = "expire_at"
     enabled        = true
   }
-
   tags = {
     Name        = "short-ids"
     Environment = "dev"
